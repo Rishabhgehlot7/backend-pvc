@@ -100,6 +100,15 @@ app.use('/images', express.static('uploads'));
 const upload = multer({ storage: storage });
 // Routes
 
+
+app.get('/hello', async (req, res) => {
+  try {
+    res.status(200).json({
+      hello: "world",
+    });
+  } catch (e) { console.error(e) }
+})
+
 // Create a new product with images (only accessible to authenticated admin)
 app.post('/products', authenticateAdmin, upload.array('images', 2), async (req, res) => {
   try {
