@@ -14,7 +14,7 @@ const port = 4000; // Port number
 app.use(cors());
 
 // Connect to MongoDB database
-mongoose.connect('mongodb://localhost:27017/testing123', {
+mongoose.connect('mongodb+srv://rishabh3x:rishabh1234@cluster0.wdefpob.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {
